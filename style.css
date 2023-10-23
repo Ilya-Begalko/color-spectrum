@@ -12,9 +12,7 @@ body {
 }
 
 .col {
-    border: 1px solid #000;
     flex: 1;
-    background: #c86a6a;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
