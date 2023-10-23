@@ -57,7 +57,7 @@ function setRandomColor(isInitial) {
 
         const title = col.querySelector('h2');
         const btn = col.querySelector('button');
-        const color = isInitial ? colors[index] : generateRandomColor();
+        const color = isInitial ? (colors[index] ? colors[index] : generateRandomColor()) : generateRandomColor();
 
         if (isLock) {
             colors.push(title.textContent);
@@ -67,10 +67,10 @@ function setRandomColor(isInitial) {
         title.textContent = color;
         col.style.background = color;
 
-        if(!isInitial){
-           colors.push(color); 
+        if (!isInitial) {
+            colors.push(color);
         }
-        
+
 
         setObjectColor(title, color);
         setObjectColor(btn, color);
